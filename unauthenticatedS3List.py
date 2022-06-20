@@ -16,7 +16,7 @@ myBucket = resource.Bucket(bucket_name)
 fileCounter = 0
 with open('s3_list.txt', 'w') as f:
     for my_bucket_object in myBucket.objects.all():
-        f.write(my_bucket_object.key + '\n')
+        f.write(my_bucket_object.key + " " + my_bucket_object.size + '\n')
         fileCounter += 1
         if fileCounter % 50 == 0:
             print(f"Filenames saved so far: {fileCounter}")
