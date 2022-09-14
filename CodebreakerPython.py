@@ -1,7 +1,7 @@
 import json
 import math
 
-stepinator = json.load(open('\Users\Grant Smith\Desktop\Codebreaker2020\Challenge4\stepinator.json', 'r'))
+stepinator = json.load(open('\Users\you\Codebreaker2020\Challenge4\stepinator.json', 'r'))
 
 step = 1/4
 position = 0
