@@ -40,13 +40,13 @@ https://github.com/samratashok/nishang
 #>      
     [CmdletBinding(DefaultParameterSetName="reverse")] Param(
 
-        [Parameter(Position = 0, Mandatory = $false, ParameterSetName="reverse")]
+        [Parameter(Position = 0, Mandatory = $true, ParameterSetName="reverse")]
         [Parameter(Position = 0, Mandatory = $false, ParameterSetName="bind")]
         [String]
         $IPAddress,
 
-        [Parameter(Position = 1, Mandatory = $false, ParameterSetName="reverse")]
-        [Parameter(Position = 1, Mandatory = $false, ParameterSetName="bind")]
+        [Parameter(Position = 1, Mandatory = $true, ParameterSetName="reverse")]
+        [Parameter(Position = 1, Mandatory = $true, ParameterSetName="bind")]
         [Int]
         $Port,
 
@@ -58,8 +58,6 @@ https://github.com/samratashok/nishang
         [Switch]
         $Bind
 
-        $IPAddress = "0"
-        $Port = 0
 
     )
 
