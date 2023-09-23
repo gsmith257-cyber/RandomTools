@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     int i;
     int size;
     int size2;
-    int key[2] = { 0xe6, 0x6f };
+    int key[2] = { 0xe6, 0x6f }; // change this as needed
 
     if (argc != 3)
     {
